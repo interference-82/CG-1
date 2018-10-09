@@ -1,0 +1,93 @@
+﻿<Window
+    x:Class="LabsCG.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:helpers="clr-namespace:LabsCG.Helpers"
+    xmlns:views="clr-namespace:LabsCG.Views"
+    xmlns:controls="clr-namespace:WpfMath.Controls;assembly=WpfMath"
+    Title="MainWindow"
+    Width="800"
+    Height="450">
+    <Window.Resources>
+        <helpers:StringToDoubleConverter x:Key="StringToDoubleConverter" />
+        <Style TargetType="TextBox">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Opacity" TargetName="border" Value="0.56"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FED52F"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="#FED52F"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush 
+            ImageSource="C:\Users\julia\source\repos\LabsCG\LabsCG\marble.jpg" 
+            TileMode="FlipY" 
+            Stretch="None" 
+            AlignmentY="Top" 
+            Viewport="0,0,1280,800" 
+            ViewportUnits="Absolute" />
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.50*" />
+            <ColumnDefinition Width="0.02*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Grid.Column="0" Margin="7">
+            <Canvas
+                Background="#FED52F"
+                Width="500"
+                Height="500"
+                />
+        </Viewbox>
+        <Viewbox Grid.Column="0" Margin="10">
+            <views:PlotCanvasView
+                x:Name="MyCanvas"
+                Width="500"
+                Height="500"
+                ItemsSource="{Binding Points, UpdateSourceTrigger=PropertyChanged}" />
+        </Viewbox>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*" />
+                <RowDefinition Height="0.25*" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="1">
+                <TextBlock 
+                    FontSize="50" 
+                    FontStyle="Italic" 
+                    FontFamily="Cambria">a=</TextBlock>
+
+                <TextBox
+                    SelectionBrush="#FED52F"
+                    CaretBrush="#545356"
+                    BorderBrush="#545356"
+                    FontSize="40"
+                    Text="{Binding Parameter, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay, Converter={StaticResource StringToDoubleConverter}}" />
+            </DockPanel>
+            <controls:FormulaControl
+                Grid.Row="0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Formula="x^{2/3} + y^{2/3}= a^{2/3}"
+                Scale="35" />
+        </Grid>
+    </Grid>
+</Window>
