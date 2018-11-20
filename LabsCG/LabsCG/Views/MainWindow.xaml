@@ -33,14 +33,11 @@
             </Setter>
         </Style>
     </Window.Resources>
+     <!--Валентинова Юлия Олеговна М80-307Б 5 вариант-->
     <Window.Background>
-        <ImageBrush 
-            ImageSource="C:\Users\julia\source\repos\LabsCG\LabsCG\marble.jpg" 
-            TileMode="FlipY" 
-            Stretch="None" 
-            AlignmentY="Top" 
-            Viewport="0,0,1280,800" 
-            ViewportUnits="Absolute" />
+        <Brush>
+            WhiteSmoke
+        </Brush>
     </Window.Background>
     <Grid>
         <Grid.ColumnDefinitions>
