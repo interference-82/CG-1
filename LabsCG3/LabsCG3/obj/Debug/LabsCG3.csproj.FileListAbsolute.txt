@@ -1,0 +1,16 @@
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\bin\Debug\LabsCG3.exe.config
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\bin\Debug\LabsCG3.exe
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\bin\Debug\LabsCG3.pdb
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.csprojAssemblyReference.cache
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\App.g.cs
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3_MarkupCompile.cache
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3_MarkupCompile.lref
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.g.resources
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.Properties.Resources.resources
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.csproj.GenerateResource.cache
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.csproj.CoreCompileInputs.cache
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.exe
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\LabsCG3.pdb
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\Views\MainWindow.g.cs
+C:\Users\julia\source\repos\LabsCG3\LabsCG3\obj\Debug\Views\MainWindow.baml
