@@ -1,5 +1,3 @@
-//Лабораторная работа #4-5-6 по компьютерной графике студента группы №307 Севастьянова Виктора
-
 var camera, controls, scene, renderer, geometry;
 var properties = {
     size: 50, // размер объекта
